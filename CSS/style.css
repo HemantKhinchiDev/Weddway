@@ -73,13 +73,11 @@ h3 {
   background-color: var(--tan) !important;
   color: var(--offwhite)
 }
-
 .btn-tan {
   background-color: var(--tan) !important;
   color: var(--offwhite);
   text-transform: uppercase;
 }
-
 .btn-tan.btn:hover {
   background-color: var(--sand) !important;
   color: var(--primary-text);
@@ -300,6 +298,48 @@ ul.list li::before {
   background-image: url(../assets/images/bg-2.png);
   background-size: cover;
   background-position-x: 50%;
+}
+.userIcon{
+  width: 2.5625rem;
+  height: 2.5625rem;
+  flex-shrink: 0;
+}
+.image-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    gap: 3rem;
+}
+.image-list h4{
+  font-size: 1.5625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--primary-text);
+  border-bottom: solid 0.25rem var(--tan);
+  padding: 0 0 0.56rem 0;
+}
+.image-list .imgBox{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.58rem;
+  padding: 0 0 1.30rem 0;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  flex-direction: column;
+}
+.image-list .imgBox .imgWraper{
+  width: 9.05588rem;
+  height: 6.10913rem;
+  flex-shrink: 0;
+  aspect-ratio: 126/85;
+}
+.image-list .imgBox p{
+  margin: 0;
 }
 /*-------------------*/
 /* Responsive tweaks */
@@ -659,8 +699,27 @@ ul.list li::before {
     font-size: 1rem;
     font-style: normal;
 }
+.userIcon{
+  width: 6.4375rem;
+  height: 6.4375rem;
+  flex-shrink: 0;
 }
-
+.image-list h4{
+  font-size: 2.1875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--primary-text);
+  border-bottom: solid 0.25rem var(--tan);
+  padding: 0 0 1.30rem 0;
+}
+.image-list .imgBox .imgWraper{
+  width: 15.75rem;
+  height: 10.625rem;
+  flex-shrink: 0;
+  aspect-ratio: 126/85;
+}
+}
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 
