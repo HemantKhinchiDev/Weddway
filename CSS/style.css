@@ -537,7 +537,15 @@ ul.list li::before {
 .toggle--checkbox:checked + .toggle--btn:before {
   left: calc(100% - 33px);
 }
-
+.custom-slide {
+  width: 8.9375rem!important;
+  height: 12.125rem!important;
+}
+.img-fit{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 /* Background colors for visualization */
 
 
@@ -601,6 +609,18 @@ ul.list li::before {
 
   /* 6 */
 }
+.mySwiper.swiper {
+  padding-bottom: 5rem;
+  display: block;
+  height: 15rem;
+}
+.swiper-pagination-bullet {
+  background: var(--tan) !important;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 90%) !important;
+  background: white !important;
+}
 
 /*testing new*/
 /* Large devices (desktops, 992px and up) */
@@ -608,16 +628,10 @@ ul.list li::before {
   .mySwiper.swiper {
     padding-bottom: 5rem;
     display: block;
-  }
+    height: auto;
+}
 
-  .swiper-pagination-bullet-active {
-    opacity: var(--swiper-pagination-bullet-opacity, 1);
-    background: white !important;
-  }
-
-  .swiper-pagination-bullet {
-    background: var(--tan) !important;
-  }
+  
 
   .swiperCaption {
     text-align: center;
@@ -738,6 +752,7 @@ ul.list li::before {
   flex-shrink: 0;
   aspect-ratio: 126/85;
 }
+
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {

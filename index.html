@@ -137,41 +137,29 @@
       <!-- Swiper -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper swiper-grid-box">
-          <div class="swiper-slide swiper-grid-item">
-            <div>
-              <img src="../assets/images/pic-1.png" class="img-fluid" alt="pic-1">
-              <div class="swiperCaption">NYERTES Győrfi-Bátori Péter</div>
-            </div>
+          <div class="swiper-slide custom-slide swiper-grid-item">
+            <img src="../assets/images/pic-1.png" class="img-fluid img-fit" alt="pic-1">
+            <div class="swiperCaption">NYERTES Győrfi-Bátori Péter</div>
           </div>
-          <div class="swiper-slide">
-            <div>
-              <img src="../assets/images/pic-2.png" class="img-fluid" alt="pic-1">
-              <div class="swiperCaption">Feyer Alexander</div>
-            </div>
+          <div class="swiper-slide custom-slide">
+            <img src="../assets/images/pic-2.png" class="img-fluid img-fit" alt="pic-1">
+            <div class="swiperCaption">Feyer Alexander</div>
           </div>
-          <div class="swiper-slide">
-            <div>
-              <img src="../assets/images/pic-3.png" class="img-fluid" alt="pic-1">
-              <div class="swiperCaption">Orbán Péter</div>
-            </div>
+          <div class="swiper-slide custom-slide">
+            <img src="../assets/images/pic-3.png" class="img-fluid img-fit" alt="pic-1">
+            <div class="swiperCaption">Orbán Péter</div>
           </div>
-          <div class="swiper-slide swiper-grid-item">
-            <div>
-              <img src="../assets/images/pic-1.png" class="img-fluid" alt="pic-1">
-              <div class="swiperCaption">NYERTES Győrfi-Bátori Péter</div>
-            </div>
+          <div class="swiper-slide custom-slide swiper-grid-item">
+            <img src="../assets/images/pic-1.png" class="img-fluid img-fit" alt="pic-1">
+            <div class="swiperCaption">NYERTES Győrfi-Bátori Péter</div>
           </div>
-          <div class="swiper-slide">
-            <div>
-              <img src="../assets/images/pic-2.png" class="img-fluid" alt="pic-1">
-              <div class="swiperCaption">Feyer Alexander</div>
-            </div>
+          <div class="swiper-slide custom-slide">
+            <img src="../assets/images/pic-2.png" class="img-fluid img-fit" alt="pic-1">
+            <div class="swiperCaption">Feyer Alexander</div>
           </div>
-          <div class="swiper-slide">
-            <div>
-              <img src="../assets/images/pic-3.png" class="img-fluid" alt="pic-1">
-              <div class="swiperCaption">Orbán Péter</div>
-            </div>
+          <div class="swiper-slide custom-slide">
+            <img src="../assets/images/pic-3.png" class="img-fluid img-fit" alt="pic-1">
+            <div class="swiperCaption">Orbán Péter</div>
           </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -425,12 +413,9 @@
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 4,
+      slidesPerView: 1,
       centeredSlides: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
+      
       spaceBetween: 30,
       grabCursor: true,
       pagination: {
