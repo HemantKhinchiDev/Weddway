@@ -163,44 +163,79 @@ ul.list li::before {
 
 .custom-navbar-nav {
   display: flex;
-  /* Your requested gap between each <li> item */
+  flex-direction: column;
   align-items: center;
 }
-
-.header-Navbtn {
-  font-size: 1rem;
+.custom-navbar-nav li{
+    width: 100%;
 }
-
-.custom-navbar-nav .nav-link {
-  text-align: center;
-  font-family: var(--font-heading);
-  color: var(--primary-text);
-  font-size: 1rem;
-  /* ~22px */
-  font-style: normal;
-  font-weight: 400;
-  padding: 0;
-  /* line-height: normal; */
-  /* Remove Bootstrap default link padding */
-  transition: color 0.3s ease;
-  text-decoration: none;
+.custom-navbar-nav li .nav-link{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: var(--font-heading);
+    color: var(--primary-text);
+    width: 100%;
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0;
+    border-radius: 0;
+    border:0;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    padding-top: clamp(0.8rem, 2vw, 1.5rem);
+    padding-bottom: clamp(0.8rem, 2vw, 1.5rem);
+    padding-left: clamp(0.10rem, 3vw, 1rem);
+    padding-right: clamp(0.10rem, 3vw, 1rem);
+    background: var(--beige);
+    border-bottom: solid 0.0625rem var(--tan);
+    white-space: nowrap;
 }
-
 .custom-navbar-nav .nav-link:hover {
   color: var(--offwhite);
   /* Optional hover color */
 }
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 0rem;
+}
+.header-Navbtn{
+    padding-top: clamp(0.8rem, 2vw, 1.5rem);
+    padding-bottom: clamp(0.8rem, 2vw, 1.5rem);
+    padding-left: clamp(0.10rem, 1vw, 1rem);
+    padding-right: clamp(0.10rem, 1vw, 1rem);
+    border: 0;
+    width: 100%;
+    text-align: left;
+    line-height: normal;
+}
+
 
 /*Home page start*/
 .headerHero {
-  height: 27.5rem;
+  background-image: url('../assets/images/hero.png');
+  height: clamp(27.5rem, 60vh, 40rem);
+  background-size: cover;             /* Scale image to cover the container */
+  background-position: center center; /* Center horizontally & vertically */
+  background-repeat: no-repeat; 
 }
 
 .largeText {
-  font-size: 3rem;
-  line-height: 3.125rem;
+  font-size: clamp(3rem, 9vw + 0.5rem, 8rem);
+  line-height: 1.2;
+  /* pt-5 pb-5 mt-5 mb-5 ps-xl-5 */
+  padding-top: clamp(3rem, 2vw + 0.5rem, 10rem);
+  padding-bottom: clamp(0.8rem, 2vw, 1.5rem);
+  padding-left: clamp(0.10rem, 1vw, 1rem);
+  padding-right: clamp(0.10rem, 1vw, 1rem);
 }
-
+.bannerSub{
+  font-size: clamp(0.75rem, 1vw + 0.5rem, 1.5rem);
+  padding-left: clamp(0.10rem, 1vw, 1rem);
+}
 .hero-section {
   height: 22rem;
 }
@@ -625,12 +660,24 @@ ul.list li::before {
 /*testing new*/
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .custom-navbar-nav li .nav-link{
+    background: none;
+    border: 0;
+  }
+  .custom-navbar-nav li .nav-link, .header-Navbtn{
+  font-size: clamp(0.5rem, 1vw + 0.5rem, 1rem);
+  text-align: center;
+}
   .mySwiper.swiper {
     padding-bottom: 5rem;
     display: block;
     height: auto;
 }
-
+  .custom-navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
   
 
   .swiperCaption {
@@ -680,7 +727,7 @@ ul.list li::before {
     flex-direction: column;
     text-align: center;
   }
-
+  
   .heading-fs {
     font-size: 1.2rem;
   }
@@ -756,14 +803,11 @@ ul.list li::before {
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
+  .custom-navbar-nav li .nav-link, .header-Navbtn{
+  font-size: clamp(0.5rem, 1vw + 0.5rem, 1.375rem);
+}
   .headerHero {
     height: 45.0625rem;
-  }
-
-  .custom-navbar-nav .nav-link,
-  .header-Navbtn {
-    font-size: 1.375rem;
   }
 
   .heading-fs {
@@ -780,10 +824,7 @@ ul.list li::before {
     line-height: 4rem;
   }
 
-  .largeText {
-    font-size: 8rem;
-    line-height: 6.875rem;
-  }
+  
 }
 
 /* Extra extra large devices (1400px and up) */
