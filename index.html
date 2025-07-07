@@ -412,20 +412,30 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- Initialize Swiper -->
   <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      centeredSlides: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      spaceBetween: 30,
-      grabCursor: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
+   const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1, // Default for mobile
+  spaceBetween: 30,
+  centeredSlides: true,
+  loop: true,
+  grabCursor: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2, // Show 2 slides on tablets and up
+    },
+    1024: {
+      slidesPerView: 3, // Optional: 3 slides on desktops
+    },
+  },
+});
+
   </script>  
 </body>
 
