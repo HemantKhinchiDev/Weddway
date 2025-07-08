@@ -241,13 +241,19 @@ ul.list li::before {
 }
 
 .headding-1 {
-  font-size: 1.5rem;
-  line-height: 1.5625rem;
+  font-size: clamp(1.2rem, 0.9333rem + 2.3333vw, 3rem);
+  line-height: clamp(2.25rem, 1.25rem + 4vw, 5rem);
+  font-weight: 400;
+  font-family: var(--font-heading);
+  font-style: normal;
 }
 
 .sub-headding-1 {
-  font-size: 0.8125rem;
-  line-height: 1.875rem;
+  font-family: var(--font-heading);
+  font-size: clamp(0.8125rem, 0.4rem + 1.6vw, 2rem); /* 13px → 32px */
+  line-height: clamp(1.125rem, 0.8rem + 3.5vw, 5rem); /* ~18px → 80px */
+  font-weight: 300;
+  font-style: italic;
 }
 
 .pera {
@@ -334,6 +340,18 @@ ul.list li::before {
   background-size: cover;
   background-position-x: 50%;
 }
+.footer-bg-position{
+  min-height: 28rem;
+  background-image: url(../assets/images/cuppol.jpg);
+  background-size: cover;
+  /* background-position: 0% 20%; */
+  background-repeat: no-repeat;
+  transition: background-position 0.5s ease;
+}
+.footer-context{
+  padding-top: clamp(30px, 8vw, 90px);
+  padding-bottom: clamp(30px, 8vw, 90px);
+}
 .userIcon{
   width: 2.5625rem;
   height: 2.5625rem;
@@ -418,7 +436,9 @@ ul.list li::before {
     order: 2;
     /* Move Column 2 up */
   }
-
+  .footer-bg-position {
+    background-position: 0% 35%;
+  }
 }
 
 /*testing*/
@@ -749,16 +769,6 @@ ul.list li::before {
     max-height: 28rem;
   }
 
-  .headding-1 {
-    font-size: 3rem;
-    line-height: 5rem;
-  }
-
-  .sub-headding-1 {
-    font-size: 1rem;
-    line-height: 2.5rem;
-  }
-
   .pera {
     font-size: 1.125rem;
   }
@@ -766,6 +776,9 @@ ul.list li::before {
   .blkBtn {
     font-size: 1rem;
   }
+  .footer-bg-position {
+    background-position: 0% 42%;
+}
   /*Page*/
   .pageHero{
     height: 21.125rem;
@@ -814,15 +827,7 @@ ul.list li::before {
     font-size: 2.1875rem;
   }
 
-  .headding-1 {
-    font-size: 3rem;
-    line-height: 4rem;
-  }
-
-  .sub-headding-1 {
-    font-size: 2rem;
-    line-height: 4rem;
-  }
+  
 
   
 }
