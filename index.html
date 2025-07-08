@@ -134,7 +134,7 @@
       <!-- Swiper -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper swiper-grid-box">
-          <div class="swiper-slide custom-slide swiper-grid-item">
+          <div class="swiper-slide custom-slide">
             <img src="../assets/images/pic-1.png" class="img-fluid img-fit" alt="pic-1">
             <div class="swiperCaption">NYERTES Győrfi-Bátori Péter</div>
           </div>
@@ -146,7 +146,7 @@
             <img src="../assets/images/pic-3.png" class="img-fluid img-fit" alt="pic-1">
             <div class="swiperCaption">Orbán Péter</div>
           </div>
-          <div class="swiper-slide custom-slide swiper-grid-item">
+          <div class="swiper-slide custom-slide">
             <img src="../assets/images/pic-1.png" class="img-fluid img-fit" alt="pic-1">
             <div class="swiperCaption">NYERTES Győrfi-Bátori Péter</div>
           </div>
@@ -409,30 +409,51 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- Initialize Swiper -->
   <script>
-   const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1, // Default for mobile
-  spaceBetween: 30,
-  centeredSlides: true,
+  const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3, // Changed from 1 to 3 for mobile
+  spaceBetween: 20,
   loop: true,
-  grabCursor: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  breakpoints: {
-    768: {
-      slidesPerView: 2, // Show 2 slides on tablets and up
-    },
-    1024: {
-      slidesPerView: 3, // Optional: 3 slides on desktops
-    },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
   },
-});
 
+  loopedSlides: 6,
+
+  on: {
+    init: function () {
+      this.update();
+    },
+    resize: function () {
+      this.update();
+    }
+  },
+
+  breakpoints: {
+    // Mobile (default)
+    320: {
+      slidesPerView: 3,
+      spaceBetween: 10, // Reduced space for mobile
+      loopedSlides: 6,
+    },
+    // Tablet
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      loopedSlides: 6,
+    },
+    // Desktop
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loopedSlides: 8,
+    }
+  }
+});
   </script>  
 </body>
 
