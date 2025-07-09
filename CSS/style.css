@@ -329,10 +329,17 @@ ul.list li::before {
   background-color: var(--primary-text);
   color: var(--offwhite);
   font-size: 0.625rem;
-
+  width: 100%;
   font-weight: 300;
   text-decoration: none;
   padding: .65rem 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.grid-item:hover .blkBtn,
+.grid-item:focus-within .blkBtn {
+  background-color: var(--tan); /* gold-brown accent */
+  color: #000;
 }
 /*Pages*/
 .pageHero{
@@ -439,9 +446,7 @@ ul.list li::before {
     order: 2;
     /* Move Column 2 up */
   }
-  .footer-bg-position {
-    background-position: 0% 35%;
-  }
+  
 }
 
 /*testing*/
@@ -468,8 +473,26 @@ ul.list li::before {
   min-width: 16.375rem;
   max-width: 16.375rem;
   display: flex;
+  flex-direction: column;
   align-items: flex-end;
   justify-content: center;
+  overflow: hidden;
+}
+.grid-item .imgSec{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.grid-item .imgSec img {
+  transition: transform 2s ease;
+}
+
+.grid-item .imgSec:hover img,
+.grid-item .imgSec:focus-within img {
+  transform: scale(1.07);
 }
 
 /* Merged column: takes 2 columns + 1 gap = 16.375*2 + 1.81 = ~34.56rem */
@@ -794,9 +817,7 @@ ul.list li::before {
   .blkBtn {
     font-size: 1rem;
   }
-  .footer-bg-position {
-    background-position: 0% 42%;
-}
+  
   /*Page*/
   .pageHero{
     height: 21.125rem;
