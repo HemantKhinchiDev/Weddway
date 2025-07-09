@@ -284,17 +284,23 @@ ul.list li::before {
   transform: translateX(0);
   opacity: 1;
 }
-.girl-photo .imgEff  {
-  transform: translateX(100px);
+.girl-photo {
+  overflow-x: hidden;
+}
+
+.girl-photo .imgEff {
+  transform: translateX(40px); /* reduced offset to stay within bounds */
   opacity: 0;
   transition: transform 1.2s ease-out, opacity 1s ease-out;
   will-change: transform, opacity;
 }
 
-.girl-photo .imgEff.in-view  {
+
+.girl-photo .imgEff.in-view {
   transform: translateX(0);
   opacity: 1;
 }
+
 
 
 .frame {
@@ -780,16 +786,50 @@ ul.list li::before {
     margin-left: auto;
     margin-right: auto;
   }
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
 
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 36.1875rem !important;
-    height: 28.8125rem !important;
-  }
+.image-box {
+  width: 100%;
+  aspect-ratio: 579 / 460; /* exact desktop image ratio */
+  max-width: 579px; /* optional: cap for larger screens */
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.swiperCaption {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  min-height: 2rem; /* fixes vertical spacing shift */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.swiperCaption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  max-height: 3rem; /* Or whatever fits cleanly */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
   /* .swiper-slide img {
     width: 36.1875rem;
     height: 28.8125rem;
