@@ -346,10 +346,10 @@ ul.list li::before {
 .footer-bg-position{
   min-height: 28rem;
   background-image: url(../assets/images/cuppol.jpg);
-  background-size: cover;
-  /* background-position: 0% 20%; */
+    background-size: cover;
   background-repeat: no-repeat;
-  transition: background-position 0.5s ease;
+  background-attachment: fixed; /* Enables parallax on most browsers */
+  background-position: center center;
 }
 .footer-context{
   padding-top: clamp(30px, 8vw, 90px);

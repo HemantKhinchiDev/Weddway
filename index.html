@@ -454,6 +454,14 @@
     }
   }
 });
+  </script>
+  <script>
+    window.addEventListener("scroll", function () {
+  const section = document.querySelector(".footer-bg-position");
+  let offset = window.pageYOffset;
+  section.style.backgroundPositionY = `${offset * 0.4}px`; // Adjust multiplier for speed
+});
+
   </script>  
 </body>
 
