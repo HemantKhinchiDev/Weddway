@@ -23,6 +23,7 @@ body {
   font-weight: var(--font-weight-light);
   font-size: 1.125rem;
   color: var(--primary-text);
+  overflow-x: hidden;
   /*
   background-color: var(--offwhite);
   text-align: center; */
@@ -273,6 +274,28 @@ ul.list li::before {
   order: 2;
   /* Move Column 1 down */
 }
+.group-photo .cell-1 {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: transform 1.2s ease-out, opacity 1s ease-out;
+}
+
+.group-photo .cell-1.in-view {
+  transform: translateX(0);
+  opacity: 1;
+}
+.girl-photo .imgEff  {
+  transform: translateX(100px);
+  opacity: 0;
+  transition: transform 1.2s ease-out, opacity 1s ease-out;
+  will-change: transform, opacity;
+}
+
+.girl-photo .imgEff.in-view  {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 
 .frame {
   border: 0.25rem solid var(--tan);
@@ -782,6 +805,7 @@ ul.list li::before {
     position: absolute;
     right: -18%;
     width: 100%;
+    z-index: 9;
   }
 
   .custom-navbar-nav {

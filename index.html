@@ -206,7 +206,7 @@
     <!-- girl photo -->
     <section class="bg-sand ">
       <div class="container-fluid no-padding">
-        <div class="d-flex flex-column flex-md-row pt-4">
+        <div class="d-flex flex-column flex-md-row pt-4 girl-photo">
           <div class="col-md-6 col-lg-6 d-flex">
             <div class="align-content-center h-100 justify-content-center overflow-visible position-relative w-100">
               <div class="modalImageCaption">
@@ -229,7 +229,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6 d-flex pb-5 ps-5 pb-md-0 ps-md-0">
+          <div class="col-md-6 col-lg-6 d-flex pb-5 ps-5 pb-md-0 ps-md-0 imgEff">
             <img src="../assets/images/girl-photo.png" class="img-fluid" alt="" />
           </div>
         </div>
@@ -455,7 +455,31 @@
   }
 });
   </script>
-   
+   <script>
+    function revealOnScroll() {
+  const target = document.querySelector('.cell-1');
+  const rect = target.getBoundingClientRect();
+  if (rect.top < window.innerHeight - 100) {
+    target.classList.add('in-view');
+  }
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll); // in case already in view
+
+
+function revealCategoryImage() {
+  const target = document.querySelector('.girl-photo .imgEff'); // right-side image container
+  const rect = target.getBoundingClientRect();
+  if (rect.top < window.innerHeight - 100) {
+    target.classList.add('in-view');
+  }
+}
+
+window.addEventListener('scroll', revealCategoryImage);
+window.addEventListener('load', revealCategoryImage); // in case it's already in view
+
+   </script>
 </body>
 
 </html>
