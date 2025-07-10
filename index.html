@@ -22,6 +22,7 @@
 </head>
 
 <body>
+  
   <header>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-white pt-0 pb-0" aria-label="Thirteenth navbar example">
@@ -182,8 +183,7 @@
       <div class="container">
         <div class="d-grid pt-5 pb-5 group-photo">
           <div class="d-flex justify-content-center align-items-center cell-1">
-            <img src="../assets/images/group-photo.png" class="img-fluid frame" alt="Group Photo 1"
-              style="max-height: 43.25rem;">
+            <img src="../assets/images/group-photo.png" class="img-fluid frame" alt="Group Photo 1" style="max-height: 43.25rem;">
           </div>
           <div class="pb-3 pe-4 ps-4 pt-3 cell-2">
             <h3 class="sub-headding-1 fst-italic mb-2">Több, mint díj – ez a hírneved, presztízsed</h3>
@@ -218,6 +218,8 @@
         </div>
       </div>
     </section>
+    
+    <!-- Addinational sec -1 End -->
     <!-- girl photo -->
     <section class="bg-sand ">
       <div class="container-fluid no-padding">
@@ -402,7 +404,89 @@
     </div>
   </footer>
   <!-- Footer -->
+<!-- Addinational sec -1 start -->
+ <br>
+ <br>
+     <section class="category-section bg-sand">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <h2 class="headding-1 mb-4">Nevezési kategóriák</h2>
+            <p>
+               A WeddWay pályázatban tíz kategória áll rendelkezésedre – a készülődés intim részleteitől kezdve a ceremónia megható pillanatain és a tánc önfeledt mozdulatain át, egészen a kreatív portrékig és humoros jelenetekig. Minden képnek helye van, ami szívből született – és lencsevégre kapta az igazi varázslatot.
+            </p>
+            <button class="btn btn-tan fw-bold px-4 py-2 rounded-0">ÖSSZES KATEGÓRIA</button>
+          </div>
+          <div class="col-lg-6 mb-5 px-5">
+            <div class="swiper-category">
+              <div class="swiper-wrapper swiper-wrapper-category">
+                <div class="swiper-slide">
+                  <img src="../assets/images/thumb-01.jpg" class="" alt="Group Photo 1">
+                  <div class="labelMt">FASHION</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="../assets/images/thumb-02.jpg" class="" alt="Group Photo 1">
+                  <div class="labelMt">CEREMÓNIA</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="../assets/images/thumb-03.jpg" class="" alt="Group Photo 1">
+                  <div class="labelMt">FASHION</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="../assets/images/thumb-04.jpg" class="" alt="Group Photo 1">
+                  <div class="labelMt">CEREMÓNIA</div>
+                </div>
+              </div>
+              <div class="swiper-button-prev swiper-button-prev-category"></div>
+              <div class="swiper-button-next swiper-button-next-category"></div>
+              <div class="swiper-pagination swiper-pagination-category mt-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+    </section>
+    <!-- Addinational sec -1 start -->
+  <br>
+ <br>
+     <!--Addinational sec - 2 start-->
+    <section>
+     <div class="container py-5">
+      <div class="text-center mb-4 col-9 mx-auto">
+        <h2 class="fw-bold">Nevezési kategóriák</h2>
+        <p>
+           A WeddWay pályázatban tíz kategória áll rendelkezésedre – a készülődés intim részleteitől kezdve a ceremónia megható pillanatain és a tánc önfeledt mozdulatain át, egészen a kreatív portrékig és humoros jelenetekig. Minden képnek helye van, ami szívből született – és lencsevégre kapta az igazi varázslatot.
+        </p>
+      </div>
+
+      <div class="swiper swiper-category2">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+              <img src="../assets/images/thumb-01.jpg" class="" alt="Group Photo 1">
+              <div class="labelMt">FASHION</div>
+          </div>
+          <div class="swiper-slide">
+            <img src="../assets/images/thumb-02.jpg" class="" alt="Group Photo 1">
+            <div class="labelMt">CEREMÓNIA</div>
+          </div>
+          <div class="swiper-slide">
+            <img src="../assets/images/thumb-03.jpg" class="" alt="Group Photo 1">
+            <div class="labelMt">HUMOR</div>
+          </div>
+          <div class="swiper-slide">
+            <img src="../assets/images/thumb-04.jpg" class="" alt="Group Photo 1">
+            <div class="labelMt">Páros kreatív portré</div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination mt-3"></div>
+    </div>
+  </section>
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -423,73 +507,7 @@
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- Initialize Swiper -->
-  <script>
-  const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3, // Changed from 1 to 3 for mobile
-  spaceBetween: 20,
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-
-  loopedSlides: 6,
-
-  on: {
-    init: function () {
-      this.update();
-    },
-    resize: function () {
-      this.update();
-    }
-  },
-
-  breakpoints: {
-  320: {
-    slidesPerView: 1.2,
-    spaceBetween: 12,
-  },
-  640: {
-    slidesPerView: 2,
-    spaceBetween: 20,
-  },
-  1024: {
-    slidesPerView: 3,
-    spaceBetween: 30,
-  }
-}
-
-});
-  </script>
-   <script>
-    function revealOnScroll() {
-  const target = document.querySelector('.cell-1');
-  const rect = target.getBoundingClientRect();
-  if (rect.top < window.innerHeight - 100) {
-    target.classList.add('in-view');
-  }
-}
-
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll); // in case already in view
-
-
-function revealCategoryImage() {
-  const target = document.querySelector('.girl-photo .imgEff'); // right-side image container
-  const rect = target.getBoundingClientRect();
-  if (rect.top < window.innerHeight - 100) {
-    target.classList.add('in-view');
-  }
-}
-
-window.addEventListener('scroll', revealCategoryImage);
-window.addEventListener('load', revealCategoryImage); // in case it's already in view
-
-   </script>
+  <script src="../assets/JS/script.js"></script>
 </body>
 
 </html>

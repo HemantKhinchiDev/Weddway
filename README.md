@@ -33,3 +33,20 @@
         delay: 5000,
         disableOnInteraction: false,
       },
+
+
+
+       var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 2,
+      centeredSlides: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      spaceBetween: 30,
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
