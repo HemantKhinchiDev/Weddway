@@ -98,9 +98,13 @@ const categorySwiper2 = new Swiper(".swiper-category2", {
       el: ".swiper-pagination",
       clickable: true
     },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
+        nextEl: ".swiper-button-next-category2",
+        prevEl: ".swiper-button-prev-category2"
     },
     slidesPerView: 1,
     spaceBetween: 20,

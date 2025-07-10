@@ -799,12 +799,12 @@ ul.list li::before {
   transform: translateY(-50%);
 }
 
-.swiper-category2 .swiper-button-prev {
-  left: 0rem!important;
+/* .swiper-category2 .swiper-button-prev {
+  left: 0;
 }
 .swiper-category2 .swiper-button-next {
-  right: 0rem!important;
-}
+  right: 0;
+} */
 .swiper-category2 .swiper-button-next:after, .swiper-button-prev:after {
     font-family: swiper-icons;
     font-size: 20px!important;
