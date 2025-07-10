@@ -108,6 +108,7 @@ const categorySwiper2 = new Swiper(".swiper-category2", {
     },
     slidesPerView: 1,
     spaceBetween: 20,
+    
     breakpoints: {
         768: {
             slidesPerView: 2
