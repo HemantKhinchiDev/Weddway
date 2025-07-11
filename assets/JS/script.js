@@ -88,33 +88,43 @@ const categorySwiper = new Swiper('.swiper-category', {
     }
 });
 //script code for category-2
-const categorySwiper2 = new Swiper(".swiper-category2", {
+// Add scroll and load listeners for reveal function
+// 🔄 Scroll & Load based image reveal
+window.addEventListener('load', function () {
+  initCategorySwiper2();
+});
+function initCategorySwiper2() {
+  const categorySwiper2 = new Swiper(".swiper-category2", {
+    slidesPerView: 1,
+    spaceBetween: 16,
     loop: true,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    },
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
     },
     navigation: {
-        nextEl: ".swiper-button-next-category2",
-        prevEl: ".swiper-button-prev-category2"
+      nextEl: ".swiper-button-next-category2",
+      prevEl: ".swiper-button-prev-category2"
     },
-    slidesPerView: 1,
-    spaceBetween: 20,
-    
+    pagination: {
+      el: ".swiper-pagination-category2",
+      clickable: true
+    },
     breakpoints: {
-        768: {
-            slidesPerView: 2
-        },
-        1024: {
-            slidesPerView: 4
-        }
+      768: {
+        slidesPerView: 2
+      },
+      1024: {
+        slidesPerView: 4
+      }
     }
-});
+  });
+
+  categorySwiper2.on('slideChangeTransitionEnd', () => {
+    setTimeout(revealCategoryImage, 100);
+  });
+}
+
+
+
+
