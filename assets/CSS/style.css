@@ -28,7 +28,7 @@ body {
   background-color: var(--offwhite);
   text-align: center; */
 }
-
+/*utility class*/
 h1,
 h2,
 h3,
@@ -58,7 +58,9 @@ h3 {
 .bg-beige {
   background-color: var(--beige) !important;
 }
-
+.bg-offwhite{
+  background-color: var(--offwhite)
+}
 .bg-sand {
   background-color: var(--sand) !important;
 }
@@ -164,7 +166,41 @@ ul.list li::before {
 .fs-0-8125 {
   font-size: 0.8125rem;
 }
+/* border title*/
+.borderB{border-bottom:4px solid var(--tan);} 
+/*icons*/
+.bi-globe{
+  display: inline-block; /* Ensures it behaves like an icon */
+  background: url('../images/icon-web.png') 0 0; /* Use correct icon */
+  background-size: cover; /* Ensures full coverage */
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem; /* Optional: for spacing */
+}
+.bi-instagram {
+  display: inline-block; /* Ensures it behaves like an icon */
+  background-image: url('../images/icon-instagram.png'); /* Use correct icon */
+  background-size: cover; /* Ensures full coverage */
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem; /* Optional: for spacing */
+}
+.blend-remove-white {
+  mix-blend-mode: multiply;
+}
+.zoom-in-hover {
+  transition: transform 2s ease;
+}
 
+.zoom-in-hover:hover,
+.zoom-in-hover:focus-within {
+  transform: scale(1.07);
+}
+
+
+/*utility class end*/
 .custom-navbar-nav {
   display: flex;
   flex-direction: column;
@@ -373,6 +409,10 @@ ul.list li::before {
   background-color: var(--tan); /* gold-brown accent */
   color: #000;
 }
+.blkBtn:hover{
+  background-color: var(--tan); /* gold-brown accent */
+  color: #000;
+}
 /*Pages*/
 .pageHero{
   height: 9.9375rem;
@@ -456,6 +496,127 @@ ul.list li::before {
   margin: 0;
 }
 /*-------------------*/
+/*--------line Title-----------*/
+.lineTitle{
+  font-size: 2.1875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--primary-text);
+  border-bottom: solid 0.25rem var(--tan);
+  padding: 0 0 1.30rem 0;
+}
+/*--------line Title-----------*/
+/*-------Page 3-------*/
+.gallery-box {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--beige);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.gallery-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-box:hover img {
+  transform: scale(1.05);
+}
+
+.caption {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  font-size: 1rem;
+  background-color: var(--tan);
+  padding: 0.5rem;
+}
+/*--juri section--*/
+
+.jury-description {
+  font-family: inherit;
+}
+
+.jury-btn {
+  background-color: var(--tan);
+  color: var(--primary-text);
+  font-weight: var(--font-weight-bold);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.jury-btn:hover {
+  background-color: var(--sand);
+}
+
+/*--Team section--*/
+.team-section {
+  background-color: var(--offwhite);
+}
+
+.team-name {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--tan);
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+.team-bio {
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: var(--font-weight-regular);
+}
+.team-contact{
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  flex-flow: column;
+  margin: 0;
+  padding: 0;
+}
+.team-contact li{
+  display: flex;
+  align-items: center;
+}
+.team-contact a.team-link {
+  color: var(--tan);
+  text-decoration: none;
+  font-weight: var(--font-weight-2light);
+}
+.team-contact a.team-link:hover{
+  color: var(--font-heading);
+}
+.team-contact i {
+  color: var(--tan);
+  margin-right: 0.5rem;
+}
+
+.team-image-box {
+  position: relative;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.team-caption {
+  background-color: var(--primary-text);
+  color: white;
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.5rem;
+  margin-top: -4px;
+}
 /* Responsive tweaks */
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {}
