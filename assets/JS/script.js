@@ -124,6 +124,38 @@ function initCategorySwiper2() {
     setTimeout(revealCategoryImage, 100);
   });
 }
+//script code for awardWin-2
+// script code for awardWin-2 (refactored to match category swiper style)
+const awardWinSwiper = new Swiper('.swiper-awardWin', {
+  slidesPerView: 1, // default for mobile
+  spaceBetween: 16,
+  loop: true,
+
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next-awardWin',
+    prevEl: '.swiper-button-prev-awardWin',
+  },
+
+  pagination: {
+    el: '.swiper-pagination-awardWin',
+    clickable: true,
+  },
+
+  breakpoints: {
+    768: {
+      slidesPerView: 1, // for tablets and up
+    },
+    1024: {
+      slidesPerView: 1, // optional: for desktops
+    }
+  }
+});
+
 
 
 

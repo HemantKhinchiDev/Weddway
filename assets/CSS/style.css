@@ -198,8 +198,21 @@ ul.list li::before {
 .zoom-in-hover:focus-within {
   transform: scale(1.07);
 }
-
-
+ul.custom-list li{
+  position: relative;
+  padding-left: 2rem;
+  list-style: none;
+}
+ul.custom-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4em;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: var(--tan);
+  border-radius: 50%;
+}
 /*utility class end*/
 .custom-navbar-nav {
   display: flex;
@@ -303,6 +316,11 @@ ul.list li::before {
   font-size: 0.6875rem;
 }
 
+.group-photoNew {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
 .group-photo {
   display: grid;
   grid-template-columns: 1fr;
@@ -521,6 +539,7 @@ ul.list li::before {
   height: auto;
   object-fit: cover;
   transition: transform 0.4s ease;
+  max-height: 280px;
 }
 
 .gallery-box:hover img {
@@ -626,6 +645,9 @@ ul.list li::before {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .group-photoNew {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .group-photo {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -992,7 +1014,72 @@ ul.list li::before {
 }
 
 /*for swiper-category end*/
+/*for swiper page- 3 start*/
+.swiper-awardWin {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 4rem;
+}
+.swiper-wrapper-awardWin{
+  
+}
+.swiper-wrapper-awardWin .swiper-slide{
+  padding: 0;
+}
+.category-section .row {
+  flex-wrap: wrap;
+  overflow: hidden;
+}
 
+.swiper-awardWin .swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 3 / 4; /* optional: forces consistent slide shape */
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #211C17;
+  background-color: #e6d6c1;
+  border-radius: 50%;
+  padding: 0.75rem;
+  width: 3rem!important;
+  height: 3rem!important;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-button-prev-awardWin {
+  left: 0rem!important;
+}
+.swiper-button-next-awardWin {
+  right: 0rem!important;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-family: swiper-icons;
+    font-size: 20px!important;
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+    color: #211C17;
+}
+.swiper-pagination-bullet {
+  background-color: var(--tan);
+  opacity: 0.8;
+}
+.swiper-pagination-bullet-active {
+  background: #211C17;
+}
+
+.swiper-awardWin .swiper-pagination {
+  bottom: 1rem!important;
+}
+/*for swiper page- 3 end*/
 /* Background colors for visualization */
 @media (max-width: 1180px) {
   
