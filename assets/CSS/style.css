@@ -1154,7 +1154,10 @@ ul.custom-list li::before {
     height: 43.0625rem;
   }
 
-  
+  .custom-image-row {
+    flex-direction: column;
+    align-items: center;
+  }
 
   /* 6 */
 }
@@ -1320,7 +1323,32 @@ ul.custom-list li::before {
   flex-shrink: 0;
   aspect-ratio: 126/85;
 }
+/*page 5*/
+.custom-image-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  text-align: center;
+}
 
+.image-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-title {
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid #ccc;
+  display: inline-block;
+}
+
+.image-box {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
