@@ -655,6 +655,9 @@ ul.custom-list li::before {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    .imgBoxWrapper > * {
+    flex-basis: calc(33.33% - 16px); /* Adjust gap math */
+  }
   .group-photoNew {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1175,9 +1178,7 @@ ul.custom-list li::before {
 /*testing new*/
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .imgBoxWrapper > * {
-    flex-basis: calc(33.33% - 16px); /* Adjust gap math */
-  }
+
   .custom-navbar-nav li .nav-link{
     background: none;
     border: 0;
