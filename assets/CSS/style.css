@@ -493,6 +493,16 @@ ul.custom-list li::before {
   border-bottom: solid 0.25rem var(--tan);
   padding: 0 0 0.56rem 0;
 }
+.image-list .imgBoxWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+}
+.imgBoxWrapper > * {
+  flex: 1 1 300px; /* Flex-grow | Flex-shrink | Min-width */
+  max-width: 100%;
+}
 .image-list .imgBox{
   display: flex;
   flex-wrap: wrap;
@@ -1165,6 +1175,9 @@ ul.custom-list li::before {
 /*testing new*/
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .imgBoxWrapper > * {
+    flex-basis: calc(33.33% - 16px); /* Adjust gap math */
+  }
   .custom-navbar-nav li .nav-link{
     background: none;
     border: 0;
