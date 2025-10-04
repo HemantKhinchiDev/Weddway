@@ -154,7 +154,24 @@ const awardWinSwiper = new Swiper('.swiper-awardWin', {
       slidesPerView: 1, // optional: for desktops
     }
   }
+
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper("#flip-slider .swiper-container", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next-category2",
+      prevEl: ".swiper-button-prev-category2",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+});
+
 
 
 
