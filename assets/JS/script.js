@@ -158,9 +158,8 @@ const awardWinSwiper = new Swiper('.swiper-awardWin', {
 });
 //script code for flip-slider
 const flipSwiper = new Swiper(".flipSwiper", {
-  slidesPerView: 3, // Changed from 1 to 3 for mobile
-  spaceBetween: 20,
   loop: true,
+  spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -169,34 +168,22 @@ const flipSwiper = new Swiper(".flipSwiper", {
     delay: 3000,
     disableOnInteraction: false,
   },
-
-  loopedSlides: 6,
-
-  on: {
-    init: function () {
-      this.update();
-    },
-    resize: function () {
-      this.update();
-    }
-  },
-
   breakpoints: {
-  320: {
-    slidesPerView: 1.2,
-    spaceBetween: 12,
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
   },
-  640: {
-    slidesPerView: 2,
-    spaceBetween: 20,
-  },
-  1024: {
-    slidesPerView: 3,
-    spaceBetween: 30,
-  }
-}
-
 });
+
 
 
 
